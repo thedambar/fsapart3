@@ -1,0 +1,27 @@
+{
+  "name": "fsapart3",
+  "version": "1.0.0",
+  "description": "Fullstack open course part 3 exercises",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedambar/fsapart3.git"
+  },
+  "author": "Daniel Ambar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thedambar/fsapart3/issues"
+  },
+  "homepage": "https://github.com/thedambar/fsapart3#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
