@@ -5,6 +5,7 @@ import Filter from './components/Filter'
 import Error from './components/Error'
 import Notice from './components/Notice'
 import axios from 'axios'
+import personService from './services/personService';
 import './index.css'
 
 const App = () => {
@@ -17,11 +18,15 @@ const App = () => {
 
   useEffect(() => {
     console.log('effect')
-    axios
-      .get('http://localhost:3001/api/persons')
+    personService
+      .getAll()
       .then(response => {
-        setPersons(response.data)
+        setPersons(response)
         setPending(false);
+      })
+      .catch(error => {
+        setError(`Could not load data: ${error}`);
+        setTimeout(() => setError(null), 5000);
       })
   }, [])
 
